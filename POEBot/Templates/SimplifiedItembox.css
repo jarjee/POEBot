@@ -1,0 +1,697 @@
+@font-face {
+    font-family:'Fontin-Regular';
+    src:local('Fontin-Regular'),local('Fontin-Regular'),url(https://hydra-media.cursecdn.com/hydra/fonts/Fontin-Regular.ttf) format('truetype');
+    font-weight:400;
+    font-style:normal
+}
+@font-face {
+    font-family:'Fontin-Bold';
+    src:local('Fontin-Bold'),local('Fontin-Bold'),url(https://hydra-media.cursecdn.com/hydra/fonts/Fontin-Bold.ttf) format('truetype');
+    font-weight:700;
+    font-style:normal
+}
+@font-face {
+    font-family:'Fontin-Italic';
+    src:local('Fontin-Italic'),local('Fontin-Italic'),url(https://hydra-media.cursecdn.com/hydra/fonts/Fontin-Italic.ttf) format('truetype');
+    font-weight:400;
+    font-style:italic
+}
+@font-face {
+    font-family:'Fontin-SmallCaps';
+    src:local('Fontin-SmallCaps'),local('Fontin-SmallCaps'),url(https://hydra-media.cursecdn.com/hydra/fonts/Fontin-SmallCaps.ttf) format('truetype')
+}
+
+body {
+    background-color: black;
+}
+
+.item-box {
+    display: table;
+    border-width: 1px;
+    border-style: solid;
+    min-width: 300px;
+    text-align: center;
+    white-space: nowrap;
+    font-family: 'Fontin-SmallCaps', Verdana, Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    font-style: normal;
+    font-variant-ligatures: none;
+    color: #7f7f7f;
+    background-color: #000
+}
+.item-box.-normal {
+    border-color: #c8c8c8
+}
+.item-box.-magic {
+    border-color: #8888ff
+}
+.item-box.-rare {
+    border-color: #ffff77
+}
+.item-box.-unique {
+    border-color: #af6025
+}
+.item-box.-currency {
+    border-color: #aa9e82
+}
+.item-box.-gem {
+    border-color: #1aa29b
+}
+.item-box.-quest {
+    border-color: #4ae63a
+}
+.item-box.-prophecy {
+    border-color: #b54bff
+}
+.item-box.-relic {
+    border-color: #82ad6a
+}
+.item-box > .header {
+    display: block;
+    position: relative;
+    font-size: 20px;
+    background-repeat: repeat-x
+}
+.item-box > .header::before,
+.item-box > .header::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    background-repeat: no-repeat;
+    content: ""
+}
+.item-box > .header::before {
+    left: 0
+}
+.item-box > .header::after {
+    right: 0
+}
+.item-box.-normal > .header {
+    color: #c8c8c8
+}
+.item-box.-magic > .header {
+    color: #8888ff
+}
+.item-box.-rare > .header {
+    color: #ffff77
+}
+.item-box.-unique > .header {
+    color: #af6025
+}
+.item-box.-currency > .header {
+    color: #aa9e82
+}
+.item-box.-gem > .header {
+    color: #1aa29b
+}
+.item-box.-quest > .header {
+    color: #4ae63a
+}
+.item-box.-prophecy > .header {
+    color: #b54bff
+}
+.item-box.-relic > .header {
+    color: #82ad6a
+}
+.item-box > .header.-single,
+.item-box > .header.-single::before,
+.item-box > .header.-single::after {
+    background-image: url(https://hydra-media.cursecdn.com/pathofexile.gamepedia.com/9/9b/Item-ui-header-single.png)
+}
+.item-box > .header.-single {
+    padding: 3px 29px;
+    height: 28px;
+    line-height: 25px
+}
+.item-box > .header.-single::before,
+.item-box > .header.-single::after {
+    width: 29px;
+    height: 34px
+}
+.item-box.-normal > .header.-single::before {
+    background-position: 0 0
+}
+.item-box.-normal > .header.-single {
+    background-position: center -34px
+}
+.item-box.-normal > .header.-single::after {
+    background-position: 0 -68px
+}
+.item-box.-magic > .header.-single::before {
+    background-position: 0 -102px
+}
+.item-box.-magic > .header.-single {
+    background-position: center -136px
+}
+.item-box.-magic > .header.-single::after {
+    background-position: 0 -170px
+}
+.item-box.-currency > .header.-single::before {
+    background-position: 0 -204px
+}
+.item-box.-currency > .header.-single {
+    background-position: center -238px
+}
+.item-box.-currency > .header.-single::after {
+    background-position: 0 -272px
+}
+.item-box.-gem > .header.-single::before {
+    background-position: 0 -306px
+}
+.item-box.-gem > .header.-single {
+    background-position: center -340px
+}
+.item-box.-gem > .header.-single::after {
+    background-position: 0 -374px
+}
+.item-box.-quest > .header.-single::before {
+    background-position: 0 -408px
+}
+.item-box.-quest > .header.-single {
+    background-position: center -442px
+}
+.item-box.-quest > .header.-single::after {
+    background-position: 0 -476px
+}
+.item-box.-prophecy > .header.-single::before {
+    background-position: 0 -510px
+}
+.item-box.-prophecy > .header.-single {
+    background-position: center -544px
+}
+.item-box.-prophecy > .header.-single::after {
+    background-position: 0 -578px
+}
+.item-box > .header.-double,
+.item-box > .header.-double::before,
+.item-box > .header.-double::after {
+    background-image: url(https://hydra-media.cursecdn.com/pathofexile.gamepedia.com/e/e8/Item-ui-header-double.png)
+}
+.item-box > .header.-double {
+    padding: 3px 44px;
+    height: 48px;
+    line-height: 22px
+}
+.item-box > .header.-double::before,
+.item-box > .header.-double::after {
+    width: 44px;
+    height: 54px
+}
+.item-box.-rare > .header.-double::before {
+    background-position: 0 0
+}
+.item-box.-rare > .header.-double {
+    background-position: center -54px
+}
+.item-box.-rare > .header.-double::after {
+    background-position: 0 -108px
+}
+.item-box.-unique > .header.-double::before {
+    background-position: 0 -162px
+}
+.item-box.-unique > .header.-double {
+    background-position: center -216px
+}
+.item-box.-unique > .header.-double::after {
+    background-position: 0 -270px
+}
+.item-box.-relic > .header.-double,
+.item-box.-relic > .header.-double::before,
+.item-box.-relic > .header.-double::after {
+    background-image: url(https://hydra-media.cursecdn.com/pathofexile.gamepedia.com/e/e1/Item-ui-header-relic.gif)
+}
+.item-box.-relic > .header.-double::before {
+    background-position: 0 0
+}
+.item-box.-relic > .header.-double {
+    background-position: center -54px
+}
+.item-box.-relic > .header.-double::after {
+    background-position: 0 -108px
+}
+.item-box > .header > a,
+.item-box > .header > .selflink {
+    font-weight: normal;
+    color: inherit !important
+}
+.item-stats {
+    display: block;
+    padding: 7px 12px
+}
+.item-stats.-nopad {
+    padding: 0
+}
+.item-stats > .group {
+    display: block;
+    margin: 0 auto
+}
+.item-stats > .group:nth-last-child(n+2)::after,
+.item-stat-separator::before {
+    display: block;
+    margin: 5px auto;
+    width: 221px;
+    height: 2px;
+    background-image: url(https://hydra-media.cursecdn.com/pathofexile.gamepedia.com/e/ef/Item-ui-separators.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    content: ""
+}
+.item-box.-magic > .item-stats > .group::after,
+.item-stat-separator.-magic::before {
+    background-position: 0 -2px
+}
+.item-box.-rare > .item-stats > .group::after,
+.item-stat-separator.-rare::before {
+    background-position: 0 -4px
+}
+.item-box.-unique > .item-stats > .group::after,
+.item-stat-separator.-unique::before {
+    background-position: 0 -6px
+}
+.item-box.-currency > .item-stats > .group::after,
+.item-stat-separator.-currency::before {
+    background-position: 0 -8px
+}
+.item-box.-gem > .item-stats > .group::after,
+.item-stat-separator.-gem::before {
+    background-position: 0 -10px
+}
+.item-box.-quest > .item-stats > .group::after,
+.item-stat-separator.-quest::before {
+    background-position: 0 -12px
+}
+.item-box.-prophecy > .item-stats > .group::after,
+.item-stat-separator.-prophecy::before {
+    background-position: 0 -14px
+}
+.item-box.-relic > .item-stats > .group::after,
+.item-stat-separator.-relic::before {
+    background-position: 0 -16px
+}
+.item-stats > .group.-textwrap {
+    width: 300px;
+    white-space: normal
+}
+.item-box > .image {
+    display: block;
+    padding: 7px 12px
+}
+.item-box.-floatright {
+}
+.itemboxhover,
+.itemboxhovericon {
+    position: absolute;
+    z-index: 10000000;
+}
+.itemboxhoverhide {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px)
+}
+.itemboxhovernojs {
+    display: none !important
+}
+.itemboxhover {
+    background-color: rgba(0, 0, 0, 0.85)
+}
+.itemboxhovericon {
+    display: block;
+    background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(0, 0, 0, 0.9)), color-stop(70%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0) 100%);
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#e6000000', endColorstr='#00000000', GradientType=1);
+}
+.itemhover {
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap
+}
+.item-box.-divicard {
+    border: none;
+    padding: 0;
+    white-space: normal;
+    background: none
+}
+
+.text-color,
+.tc {
+    font-style: normal
+}
+.text-color.-stat,
+.tc.-stat {
+    color: #7f7f7f
+}
+.text-color.-help,
+.tc.-help {
+    color: #7f7f7f;
+    font-style: italic
+}
+.text-color.-value,
+.tc.-value {
+    color: #ffffff
+}
+.text-color.-mod,
+.tc.-mod {
+    color: #8888ff
+}
+.text-color.-fire,
+.tc.-fire {
+    color: #960000
+}
+.text-color.-cold,
+.tc.-cold {
+    color: #366492
+}
+.text-color.-lightning,
+.tc.-lightning {
+    color: #ffd700
+}
+.text-color.-chaos,
+.tc.-chaos {
+    color: #d02090
+}
+.text-color.-cosmetic,
+.tc.-cosmetic {
+    color: #aa9e82
+}
+.text-color.-flavour,
+.tc.-flavour {
+    color: #af6025;
+    font-style: italic
+}
+.text-color.-gemdesc,
+.tc.-gemdesc {
+    color: #1aa29b
+}
+.text-color.-normal,
+.tc.-normal {
+    color: #c8c8c8
+}
+.text-color.-magic,
+.tc.-magic {
+    color: #8888ff
+}
+.text-color.-rare,
+.tc.-rare {
+    color: #ffff77
+}
+.text-color.-unique,
+.tc.-unique {
+    color: #af6025
+}
+.text-color.-currency,
+.tc.-currency {
+    color: #aa9e82
+}
+.text-color.-gem,
+.tc.-gem {
+    color: #1aa29b
+}
+.text-color.-card,
+.tc.-card {
+    color: #c1fcf8
+}
+.text-color.-quest,
+.tc.-quest {
+    color: #4ae63a
+}
+.text-color.-prophecy,
+.tc.-prophecy {
+    color: #b54bff
+}
+.text-color.-corrupted,
+.tc.-corrupted {
+    color: #d20000
+}
+.text-color.-nemesis,
+.tc.-nemesis {
+    color: rgb(255, 200, 0)
+}
+.text-color.-bloodline,
+.tc.-bloodline {
+    color: rgb(210, 0, 220)
+}
+.text-color.-torment,
+.tc.-torment {
+    color: rgb(50, 230, 100)
+}
+.text-color.-default,
+.tc.-default {
+    color: #7f7f7f
+}
+.text-color > a,
+.tc > a {
+    color: inherit !important;
+    text-decoration: none;
+}
+.text-color abbr,
+.tc abbr {
+    color: inherit
+}
+em.tc {
+    font-style: normal
+}
+em.tc.-i {
+    font-style: italic
+}
+.text-diffnormal {
+    color: #55aa22
+}
+.text-diffcruel {
+    color: #bbaa22
+}
+.text-diffmerciless {
+    color: #882222
+}
+.text-life {
+    color: rgb(184, 32, 45)
+}
+.text-mana {
+    color: rgb(18, 87, 164)
+}
+.text-energy-shield {
+    color: rgb(160, 206, 242)
+}
+
+
+.divicard-wrapper {
+    display: block;
+    position: relative;
+    width: 440px;
+    height: 668px
+}
+.divicard-art {
+    display: block;
+    position: absolute;
+    top: 56px;
+    left: 26px
+}
+.divicard-art img {
+    width: 390px;
+    height: 280px
+}
+.divicard-frame {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+.divicard-frame img {
+    width: 100%;
+    height: 100%
+}
+.divicard-header {
+    display: block;
+    position: absolute;
+    top: 14px;
+    left: 0;
+    width: 100%;
+    font-size: 20px;
+    line-height: 44px;
+    color: #030301
+}
+.divicard-header a,
+.divicard-header .selflink {
+    font-weight: normal
+}
+.divicard-stack {
+    display: block;
+    position: absolute;
+    top: 309px;
+    left: 42px;
+    width: 70px;
+    font-size: 16px;
+    line-height: 38px;
+    color: #fff
+}
+.divicard-reward {
+    display: table;
+    position: absolute;
+    top: 334px;
+    left: 35px;
+    font-size: 16px
+}
+.divicard-reward > span {
+    display: table-cell;
+    vertical-align: middle;
+    width: 374px;
+    height: 110px
+}
+.divicard-flavour {
+    display: table;
+    position: absolute;
+    top: 452px;
+    left: 35px;
+    font-size: 16px
+}
+.divicard-flavour > span {
+    display: table-cell;
+    vertical-align: middle;
+    width: 374px;
+    height: 184px
+}
+
+.infocard {
+    border-style: solid;
+    border-width: 2px 1px;
+    border-color: #474233 #403b2e #1a1812;
+    border-radius: 6px;
+    width: 292px;
+    text-align: center;
+    background-color: #332f24;
+    color:#a38d6d;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+.infocard > .topbar {
+    margin-bottom: 2px;
+    display: table;
+    width: 100%
+}
+.infocard > .topbar > .left,
+.infocard > .topbar > .middle,
+.infocard > .topbar > .right {
+    display: table-cell;
+    vertical-align: middle
+}
+.infocard > .topbar > .middle > .header {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #dfcf99
+}
+.infocard > .topbar > .middle > .subheader {
+    padding-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.0;
+    font-weight: bold
+}
+.infocard > .inner {
+    margin: 0;
+    border-style: solid;
+    border-width: 2px 1px;
+    border-color: #1a1812 #1f1c15 #474233;
+    border-radius: 6px;
+    background-color: #26231b
+}
+.infocard > .inner > .block {
+    margin: 0;
+    padding: 0.5em 1.0em;
+    list-style: none
+}
+.infocard > .inner > .block:first-child {
+    padding-top: 1.0em
+}
+.infocard > .inner > .block:last-child {
+    padding-bottom: 1.0em
+}
+.infocard[class*="passive-"] .block:nth-child(1) {
+    height: 86px
+}
+.infocard.passive-notable .block:nth-child(1) {
+    height: 131px
+}
+.infocard.passive-keystone .block:nth-child(1) {
+    height: 184px
+}
+.infocard[class*="passive-"] .block:nth-child(1) .image,
+.infocard[class*="passive-"] .block:nth-child(1) .frame {
+    height: 100%
+}
+.infocard[class*="passive-"] .block:nth-child(1) .image img {
+    margin-top: 14px;
+    width: 58px;
+    height: 58px
+}
+.infocard.passive-notable .block:nth-child(1) .image img {
+    margin-top: 20px;
+    width: 90px;
+    height: 90px
+}
+.infocard.passive-keystone .block:nth-child(1) .image img {
+    margin-top: 28px;
+    width: 128px;
+    height: 128px
+}
+.infocard[class*="passive-"] .block:nth-child(1) .frame {
+    margin-top: -86px
+}
+.infocard.passive-notable .block:nth-child(1) .frame {
+    margin-top: -131px
+}
+.infocard.passive-keystone .block:nth-child(1) .frame {
+    margin-top: -184px
+}
+.infocard[class*="passive-"] .block:nth-child(1) .frame img {
+    width: 86px;
+    height: 86px
+}
+.infocard.passive-notable .block:nth-child(1) .frame img {
+    width: 131px;
+    height: 131px
+}
+.infocard.passive-keystone .block:nth-child(1) .frame img {
+    width: 184px;
+    height: 184px
+}
+.infocard[class*="passive-"] .block:nth-child(2) {
+    padding: 0
+}
+.infocard[class*="passive-"] .block:nth-child(2) ul {
+    margin: 0
+}
+.infocard[class*="passive-"] .block:nth-child(2) ul li {
+    margin: 0;
+    list-style: none
+}
+.infocard[class*="passive-"] .block:nth-child(2) > ul > li {
+    padding: 0.2em 1.0em
+}
+.infocard[class*="passive-"] .block:nth-child(2) > ul > li:first-child {
+    padding-top: 0.5em
+}
+.infocard[class*="passive-"] .block:nth-child(2) > ul > li:last-child {
+    padding-bottom: 1.0em
+}
+.infocard[class*="passive-"] .block:nth-child(2) > ul > li > ul {
+    margin: -0.2em -1.0em;
+    border-top: 1px solid #3a3529;
+    border-bottom: 1px solid #100f0b;
+    padding: 0.4em 0
+}
+.infocard[class*="passive-"] .block:nth-child(2) > ul > li:first-child > ul {
+    border-top: none;
+    padding-top: 0
+}
+.infocard[class*="passive-"] .block:nth-child(2) > ul > li:last-child > ul {
+    border-bottom: none;
+    padding-bottom: 0
+}
+.infocard[class*="passive-"] .block:nth-child(2) > ul > li > ul > li {
+    padding: 0.2em 1.0em
+}
+.infocard[class*="passive-"] .block:nth-child(3) {
+    margin-top: -0.5em
+}
