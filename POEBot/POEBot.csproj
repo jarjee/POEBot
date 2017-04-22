@@ -52,15 +52,6 @@
     <Reference Include="HtmlAgilityPack.NetCoreCodePages, Version=1.5.0.2, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\HtmlAgilityPack.NetCoreCodePages.1.5.0.2\lib\net45\HtmlAgilityPack.NetCoreCodePages.dll</HintPath>
     </Reference>
-    <Reference Include="HtmlRenderer, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\HtmlRenderer.Core.1.5.1-beta1\lib\net45\HtmlRenderer.dll</HintPath>
-    </Reference>
-    <Reference Include="HtmlRenderer.WinForms, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\HtmlRenderer.WinForms.1.5.1-beta1\lib\net45\HtmlRenderer.WinForms.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Razor, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\Microsoft.AspNet.Razor.4.0.0-beta7\lib\net45\Microsoft.AspNet.Razor.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
       <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -76,15 +67,11 @@
     <Reference Include="NReco.ImageGenerator, Version=1.1.0.0, Culture=neutral, PublicKeyToken=0ef6c878974c90ac">
       <HintPath>..\packages\NReco.ImageGenerator.1.1.0\lib\net20\NReco.ImageGenerator.dll</HintPath>
     </Reference>
-    <Reference Include="RazorEngine, Version=4.3.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\RazorEngine.4.3.0-beta1\lib\net45\RazorEngine.dll</HintPath>
-    </Reference>
     <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\RestSharp.105.2.3\lib\net45\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="WebSocket4Net, Version=0.14.1.0, Culture=neutral, PublicKeyToken=eb4e154b696bf72a">
       <HintPath>..\packages\WebSocket4Net.0.14.1\lib\net45\WebSocket4Net.dll</HintPath>
